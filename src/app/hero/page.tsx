@@ -1,8 +1,10 @@
 import React from "react";
-import instagramIcon from "../images/instagram.svg";
-import linkedinIcon from "../images/linkedin.svg";
-import threadsIcon from "../images/threads.svg";
-import twitterIcon from "../images/twitter.svg";
+import Image from "next/image";
+// import instagramIcon from "../images/instagram.svg";
+// import linkedinIcon from "../images/linkedin.svg";
+// import threadsIcon from "../images/threads.svg";
+// import twitterIcon from "../images/twitter.svg";
+import "./content/pages.css";
 
 const IconsContainer = () => {
   const handleIconClick = (title: string) => {
@@ -11,31 +13,31 @@ const IconsContainer = () => {
   };
 
   return (
-    <div className="icons-container">
+    <div className="icons-container ">
       <div className="icons">
         <button
           className="icon-button"
           onClick={() => handleIconClick("Instagram")}
         >
-          <img src={instagramIcon} alt="Instagram" />
+          <Image src="/instagram.svg" alt="Instagram" width={50} height={50} />
         </button>
         <button
           className="icon-button"
           onClick={() => handleIconClick("LinkedIn")}
         >
-          <img src={linkedinIcon} alt="LinkedIn" />
+          <Image src="/linkedin.svg" alt="LinkedIn" width={50} height={50} />
         </button>
         <button
           className="icon-button"
           onClick={() => handleIconClick("Threads")}
         >
-          <img src={threadsIcon} alt="Threads" />
+          <Image src="/threads.svg" alt="Threads" width={50} height={50} />
         </button>
         <button
           className="icon-button"
           onClick={() => handleIconClick("Twitter")}
         >
-          <img style={{ width: "61%" }} src={twitterIcon} alt="Twitter" />
+          <Image src="/twitter-x.svg" alt="Twitter" width={67} height={67} />
         </button>
       </div>
     </div>

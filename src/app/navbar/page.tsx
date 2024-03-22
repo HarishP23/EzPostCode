@@ -21,7 +21,12 @@ export default function Example() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex-shrink-0 flex items-center">
                 {/* EzPost.ai Logo */}
-                <h1 className="text-2xl font-bold text-white">EzPost.ai</h1>
+                <h1
+                  className="text-2xl font-bold text-white"
+                  style={{ fontFamily: "'Pacifico', cursive" }}
+                >
+                  EzPost.ai
+                </h1>
               </div>
             </div>
           </div>
