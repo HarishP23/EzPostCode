@@ -11,12 +11,32 @@ const SocialMediaForm = () => {
     hashtags: 3,
     postLength: "short",
     image: null, // Initially set to null
+    platform: "", // Add platform property
   });
 
   const handleIconClick = (title: string) => {
-    // Handle icon click event
-    console.log(`Clicked on ${title} icon`);
-    // Add logic here to update formData based on icon clicked
+    // Handle icon click event and update form data based on icon clicked
+    if (title === "Instagram") {
+      setFormData({
+        ...formData,
+        platform: "Instagram",
+      });
+    } else if (title === "LinkedIn") {
+      setFormData({
+        ...formData,
+        platform: "LinkedIn",
+      });
+    } else if (title === "Threads") {
+      setFormData({
+        ...formData,
+        platform: "Threads",
+      });
+    } else if (title === "Twitter") {
+      setFormData({
+        ...formData,
+        platform: "Twitter",
+      });
+    }
   };
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -100,12 +120,14 @@ const SocialMediaForm = () => {
                 <Form.Label>Write a LinkedIn post about...</Form.Label>
                 <Form.Control
                   as="textarea"
-                  rows={5}
+                  rows={3} // Limit the visible rows to 3
                   placeholder="Enter your post content"
                   style={{
                     marginBottom: "15px",
                     width: "100%",
                     color: "black",
+                    maxHeight: "4.5em", // Adjust the max height to accommodate 3 lines
+                    overflowY: "auto", // Add vertical scrollbar if needed
                   }}
                   name="postContent"
                   value={formData.postContent}
