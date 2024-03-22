@@ -3,6 +3,8 @@ import { Boxes } from "./components/ui/background-boxes";
 import { TypewriterEffectSmooth } from "./components/ui/typewriter-effect";
 import Link from "next/link";
 
+
+
 const words = [
   {
     text: "Build",
