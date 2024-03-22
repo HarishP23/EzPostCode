@@ -1,0 +1,26 @@
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.my-40 {
+  margin-top: 3rem;
+  /* margin-bottom: 0rem; */
+}
+@media (min-width: 768px) {
+  .md\:h-\[40rem\] {
+    height: 67rem;
+  }
+}
+.mt-32 {
+  margin-top: 4rem;
+}
+.flex-row {
+  flex-direction: row !important;
+  height: 7%;
+}

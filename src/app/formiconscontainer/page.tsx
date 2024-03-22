@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Card, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./content/pages.css"; // Import CSS styles
+import { client } from "@gradio/client";
 
 const SocialMediaForm = () => {
   const [formData, setFormData] = useState({
@@ -53,12 +54,42 @@ const SocialMediaForm = () => {
     });
   };
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //     const file = event.target.files?.[0]; // Get the selected file
+  //     setFormData({
+  //       ...formData,
+  //       image: file || null, // Update the image value with the selected file or null
+  //     });
+  //   };
+  // Function to handle file change
+  const handleFileChange = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const file = event.target.files?.[0]; // Get the selected file
     setFormData({
       ...formData,
       image: file || null, // Update the image value with the selected file or null
     });
+
+    // Call Gradio API to generate caption
+    if (file) {
+      try {
+        const response = await fetch(URL.createObjectURL(file));
+        const imageBlob = await response.blob();
+
+        const app = await client("http://127.0.0.1:7860/");
+        const result = await app.predict("/predict_step", [imageBlob]);
+
+        console.log("Generated Caption:", result.data);
+        // Update the postContent state with the generated caption
+        setFormData({
+          ...formData,
+          postContent: result.data || "", // Update postContent with generated caption
+        });
+      } catch (error) {
+        console.error("Error generating caption:", error);
+      }
+    }
   };
 
   return (

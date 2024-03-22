@@ -20,12 +20,12 @@ const CaptionForm = () => {
     >
       <Card style={{ width: "40rem", margin: "auto" }}>
         <Card.Header style={{ textAlign: "center" }}>
-          <Card.Title as="h1">Social Media Caption Generator</Card.Title>
+          <Card.Title as="h1">Twitter Caption Generator</Card.Title>
         </Card.Header>
         <Card.Body>
           <Form id="caption-form" onSubmit={handleSubmit}>
             <Form.Group controlId="post-content">
-              <Form.Label>Write a LinkedIn post about...</Form.Label>
+              <Form.Label>Write a Twitter post about...</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={5}
@@ -79,7 +79,7 @@ const CaptionForm = () => {
             </Form.Group>
 
             <Button variant="primary" type="submit" style={{ width: "100%" }}>
-              Generate LinkedIn Caption
+              Generate Twitter Caption
             </Button>
           </Form>
         </Card.Body>
