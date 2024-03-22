@@ -1,11 +1,14 @@
 // pages/home.tsx
-
+"use client";
 import React from "react";
+import Navbar from "../navbar/page"; // Assuming the Navbar component is in the same directory
+import IconsContainer from "../hero/page";
 
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page!</h1>
+      <Navbar />
+      <IconsContainer />
       {/* Add your content here */}
     </div>
   );
