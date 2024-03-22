@@ -5,12 +5,14 @@ import Navbar from "../navbar/page"; // Assuming the Navbar component is in the 
 import IconsContainer from "../hero/page";
 import Form from "../form/page";
 import SocialMediaForm from "../formiconscontainer/page";
+import TabsDemo from "../tabs/page";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      <SocialMediaForm />
+      {/* <SocialMediaForm /> */}
+      <TabsDemo />
       {/* <IconsContainer />
       <Form /> */}
       {/* Add your content here */}
