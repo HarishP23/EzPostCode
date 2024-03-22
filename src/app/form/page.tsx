@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Form, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const CaptionForm = () => {
   const handleSubmit = (event: { preventDefault: () => void }) => {

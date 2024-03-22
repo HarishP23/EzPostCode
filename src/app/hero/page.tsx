@@ -1,9 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import instagramIcon from "../images/instagram.svg";
-// import linkedinIcon from "../images/linkedin.svg";
-// import threadsIcon from "../images/threads.svg";
-// import twitterIcon from "../images/twitter.svg";
 import "./content/pages.css";
 
 const IconsContainer = () => {
