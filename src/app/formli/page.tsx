@@ -25,7 +25,7 @@ const CaptionForm = () => {
         <Card.Body>
           <Form id="caption-form" onSubmit={handleSubmit}>
             <Form.Group controlId="post-content">
-              <Form.Label>Write a LinkedIn post about...</Form.Label>
+              <Form.Label className="  text-slate-900 font-bold text-xl">Write a LinkedIn post about...</Form.Label>
               <Form.Control
                 as="textarea"
                 rows={5}
@@ -35,7 +35,7 @@ const CaptionForm = () => {
             </Form.Group>
 
             <Form.Group controlId="tone">
-              <Form.Label>Tone of voice</Form.Label>
+              <Form.Label className="  text-slate-900 font-bold text-xl">Tone of voice</Form.Label>
               <Form.Control
                 as="select"
                 style={{ marginBottom: "15px", width: "100%" }}
@@ -47,7 +47,7 @@ const CaptionForm = () => {
             </Form.Group>
 
             <Form.Group controlId="hashtags">
-              <Form.Label>Number of hashtags</Form.Label>
+              <Form.Label className="  text-slate-900 font-bold text-xl">Number of hashtags</Form.Label>
               <Form.Control
                 type="number"
                 min="0"
@@ -58,7 +58,7 @@ const CaptionForm = () => {
             </Form.Group>
 
             <Form.Group controlId="post-length">
-              <Form.Label>Post length</Form.Label>
+              <Form.Label className="  text-slate-900 font-bold text-xl">Post length</Form.Label>
               <Form.Control
                 as="select"
                 style={{ marginBottom: "15px", width: "100%" }}
@@ -70,7 +70,7 @@ const CaptionForm = () => {
             </Form.Group>
 
             <Form.Group controlId="file-upload">
-              <Form.Label>Upload image</Form.Label>
+              <Form.Label className="  text-slate-900 font-bold text-xl">Upload image</Form.Label>
               <Form.Control
                 type="file"
                 accept="image/*"
