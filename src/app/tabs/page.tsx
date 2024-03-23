@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import { Tabs } from "../components/ui/tabs";
 import Formli from "../formli/page";
@@ -16,7 +15,7 @@ export default function TabsDemo() {
       ),
       value: "product",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-blue-500 to-blue-700">
           <p>EzPost.LinkedIn</p>
           <Formli />
         </div>
@@ -28,7 +27,7 @@ export default function TabsDemo() {
       ),
       value: "services",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-pink-400 to-yellow-600">
           <p>EzPost.Instagram</p>
           <Formin />
         </div>
@@ -50,7 +49,7 @@ export default function TabsDemo() {
       ),
       value: "content",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-blue-400 to-blue-600">
           <p>EzPost.X</p>
           <Formx />
         </div>
@@ -64,15 +63,3 @@ export default function TabsDemo() {
     </div>
   );
 }
-
-const DummyContent = () => {
-  return (
-    <Image
-      src="/linear.webp"
-      alt="dummy image"
-      width="1000"
-      height="1000"
-      className="object-cover object-left-top h-[60%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
-    />
-  );
-};

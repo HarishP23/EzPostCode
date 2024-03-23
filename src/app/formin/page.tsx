@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./content/pages.css";
 
 const CaptionForm = () => {
   const handleSubmit = (event: { preventDefault: () => void }) => {
@@ -40,9 +41,16 @@ const CaptionForm = () => {
                 as="select"
                 style={{ marginBottom: "15px", width: "100%" }}
               >
-                <option value="professional">Professional 🤓</option>
-                <option value="casual">Casual 😎</option>
-                <option value="excited">Excited 🎉</option>
+                <option value="casual">Casual 🤗</option>
+                <option value="conversational">Conversational 💬</option>
+                <option value="friendly">Friendly 😃</option>
+                <option value="humorous">Humorous 😆</option>
+                <option value="sarcastic">Sarcastic 🙃</option>
+                <option value="emotional">Emotional 😭</option>
+                <option value="storytelling">Storytelling 📖</option>
+                <option value="creative">Creative 🎨</option>
+                <option value="engaging">Engaging 🤗</option>
+                <option value="inspirational">Inspirational 💪</option>
               </Form.Control>
             </Form.Group>
 

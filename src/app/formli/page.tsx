@@ -41,8 +41,8 @@ const CaptionForm = () => {
                 style={{ marginBottom: "15px", width: "100%" }}
               >
                 <option value="professional">Professional 🤓</option>
-                <option value="casual">Casual 😎</option>
-                <option value="excited">Excited 🎉</option>
+                <option value="authoritative">Authoritative 💪</option>
+                <option value="engaging">Engaging 🤗</option>
               </Form.Control>
             </Form.Group>
 
